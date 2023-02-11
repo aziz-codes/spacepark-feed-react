@@ -7,7 +7,7 @@ import {
 } from "./components/index";
 const App = () => {
   return (
-    <section>
+    <section className="bg-homemain">
       <Navbar />
       <div className="flex justify-between w-full bg-red-500 mt-1">
         <Sidebar />
