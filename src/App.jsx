@@ -9,9 +9,9 @@ const App = () => {
   return (
     <section>
       <Navbar />
-      <div className="grid grid-cols-3">
+      <div className="flex justify-between w-full bg-red-500 mt-1">
         <Sidebar />
-        <div>
+        <div className="flex-2">
           <Stories />
           <Feed />
         </div>
