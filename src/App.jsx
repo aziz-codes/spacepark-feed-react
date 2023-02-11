@@ -1,7 +1,16 @@
-import React from "react";
-
+import {
+  Navbar,
+  Sidebar,
+  Stories,
+  Feed,
+  RightSidebar,
+} from "./components/index";
 const App = () => {
-  return <div className="text-red-500">App</div>;
+  return (
+    <section>
+      <Navbar />
+    </section>
+  );
 };
 
 export default App;
