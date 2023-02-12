@@ -5,6 +5,17 @@ body{
     font-family: 'Roboto', sans-serif;
 }
 
+  .sidebar::-webkit-scrollbar {
+      width: 5px;
+      background-color: #ffffff;
+     
+  }
+
+  .sidebar::-webkit-scrollbar-thumb {
+      background: rgb(165, 161, 161);
+      border-radius: 5px;
+  }
+
 @layer components{
     .icons{
         @apply h-6 w-6 text-gray-500
