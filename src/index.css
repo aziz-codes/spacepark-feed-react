@@ -4,3 +4,9 @@
 body{
     font-family: 'Roboto', sans-serif;
 }
+
+@layer components{
+    .icons{
+        @apply h-6 w-6 text-gray-500
+    }
+}
