@@ -17,7 +17,10 @@ const Navigation = () => {
           >
             <div className="flex gap-2">
               <span className="h-5 w-5 ">{link.icon}</span>
-              <h4 className="font-extrabold tracking-tight text-sm">
+              <h4
+                className="font-extrabold tracking-tight text-sm"
+                aria-selected="false"
+              >
                 {link.label}
               </h4>
             </div>
