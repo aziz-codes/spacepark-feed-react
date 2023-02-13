@@ -13,7 +13,7 @@ const Navbar = () => {
           <span className="font-semibold tracking-tight ">Spacepark</span>
         </div>
         <div className="flex gap-2 items-center">
-          <div className="flex  bg-gray-100 border rounded-md items-center">
+          <div className="md:flex  bg-gray-100 border rounded-md items-center hidden ">
             <MagnifyingGlassIcon className="h-5 w-5 text-slate-300 mx-1" />
             <input
               type="text"
@@ -22,6 +22,9 @@ const Navbar = () => {
             />
           </div>
           <Button text="Create" Icon={PlusIcon} />
+          <button className="h-8 w-8 text-lg font-bold text-white block md:hidden rounded-md border-none bg-superblue">
+            +
+          </button>
           <div className="h-10 w-10 rounded-md bg-red-500 flex justify-center items-center relative">
             <img
               src={user}

@@ -18,14 +18,14 @@ const Navigation = () => {
             <div className="flex gap-2">
               <span className="h-5 w-5 ">{link.icon}</span>
               <h4
-                className="font-extrabold tracking-tight text-sm"
+                className="font-extrabold tracking-tight text-sm hidden lg:block"
                 aria-selected="false"
               >
                 {link.label}
               </h4>
             </div>
             {link.newNotifications && (
-              <div className="h-4 w-4 rounded-full bg-superblue text-xs font-semibold tracking-tighter text-white text-center">
+              <div className="h-4 w-4 rounded-full bg-superblue text-xs font-semibold tracking-tighter text-white text-center hidden lg;block">
                 {link.newNotifications}
               </div>
             )}
