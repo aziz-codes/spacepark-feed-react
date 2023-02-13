@@ -4,7 +4,7 @@ import NavigationSkeleton from "./NavigationSkeleton";
 const SidebarSkeleton = () => {
   return (
     <div className="hidden md:block lg:w-64 bg-white h-screen  font-roboto ">
-      <div className="sidebar fixed w-64 flex flex-col gap-3 px-4 mt-3 h-screen overflow-y-auto pb-20">
+      <div className="sidebar fixed w-64 flex flex-col gap-3 px-4 mt-3 h-screen pb-20">
         {/* 
         top section
         */}

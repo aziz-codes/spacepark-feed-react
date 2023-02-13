@@ -3,13 +3,14 @@ import { dummy } from "../assets/dummy";
 const NavigationSkeleton = () => {
   return (
     <>
-      <div className="flex flex-col gap-4 mt-4 ">
-        {dummy.map((link, index) => (
-          <div className="w-24 bg-gray-400 animate-pulse" key={index}>
-            <div className="flex gap-2">
-              <span className="h-5 w-5 bg-gray-400 animate-pulse"></span>
-              <h4 className="font-extrabold tracking-tight text-sm hidden lg:block w-24 bg-gray-400 animate-pulse"></h4>
-            </div>
+      <div className="flex flex-col gap-4 mt-4 w-56">
+        {dummy.map((_, index) => (
+          <div
+            className="flex flex-row w-full px-4 gap-2 items-center"
+            key={index}
+          >
+            <div className="h-7 w-7 rounded-full bg-gray-400 animate-pulse"></div>
+            <div className="h-3 w-48 rounded-full bg-gray-400 animate-pulse"></div>
           </div>
         ))}
       </div>
