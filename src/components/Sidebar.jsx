@@ -1,5 +1,6 @@
 import React from "react";
 import user from "../assets/user.png";
+
 import Navigation from "../layouts/Navigation";
 import { PaperAirplaneIcon, XCircleIcon } from "@heroicons/react/24/outline";
 import Button from "../layouts/Button";

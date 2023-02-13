@@ -1,11 +1,12 @@
 import {
   Navbar,
-  Sidebar,
-  Stories,
-  Feed,
+  // Stories,
+  // Feed,
   RightSidebar,
 } from "./components/index";
+import { Suspense, lazy } from "react";
 import { Routes, Route } from "react-router-dom";
+const Sidebar = lazy(() => import("./components/Sidebar"));
 import {
   NewsFeed,
   Peoples,
@@ -14,17 +15,21 @@ import {
   Settings,
   Home,
 } from "./pages/index";
+import SidebarSkeleton from "./skeleton/SidebarSkeleton";
 const App = () => {
   return (
     <section className="bg-homemain">
       <Navbar />
       <div className="flex justify-between w-full bg-red-500 mt-1">
-        <Sidebar />
+        <Suspense fallback={<SidebarSkeleton />}>
+          <Sidebar />
+        </Suspense>
+
         {/* <div className="flex-2">
           <Stories />
           <Feed />
-        </div>
-         */}
+        </div> */}
+
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/peoples" element={<Peoples />} />
