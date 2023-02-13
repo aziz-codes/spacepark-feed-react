@@ -5,10 +5,10 @@ import "./index.css";
 import { Suspense, lazy } from "react";
 const App = lazy(() => import("./App"));
 import { BrowserRouter } from "react-router-dom";
-import SidebarSkeleton from "./skeleton/SidebarSkeleton";
+import Main from "./skeleton/Main";
 ReactDOM.createRoot(document.getElementById("root")).render(
   <BrowserRouter>
-    <Suspense fallback={<SidebarSkeleton />}>
+    <Suspense fallback={<Main />}>
       <App />
     </Suspense>
   </BrowserRouter>
