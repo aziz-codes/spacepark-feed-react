@@ -1,4 +1,5 @@
 import React, { Suspense, lazy } from "react";
+import Contacts from "./Contacts";
 
 const Requests = lazy(() => import("../layouts/Requests"));
 const RightSidebar = () => {
@@ -17,6 +18,7 @@ const RightSidebar = () => {
           <Suspense fallback="Loading ...">
             <Requests />
           </Suspense>
+          <Contacts />
         </div>
       </div>
     </div>
