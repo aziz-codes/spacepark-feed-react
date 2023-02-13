@@ -1,7 +1,8 @@
 import React, { Suspense, lazy } from "react";
-import Contacts from "./Contacts";
+import ContactsSkeleton from "../skeleton/ContactsSkeleton";
 
 const Requests = lazy(() => import("../layouts/Requests"));
+const Contacts = lazy(() => import("./Contacts"));
 const RightSidebar = () => {
   return (
     <div className="w-72 bg-white hidden lg:block h-screen ">
@@ -18,7 +19,9 @@ const RightSidebar = () => {
           <Suspense fallback="Loading ...">
             <Requests />
           </Suspense>
-          <Contacts />
+          <Suspense fallback={<ContactsSkeleton />}>
+            <Contacts />
+          </Suspense>
         </div>
       </div>
     </div>
