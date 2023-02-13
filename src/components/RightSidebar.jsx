@@ -1,76 +1,21 @@
 import React from "react";
+import Requests from "../layouts/Requests";
 
 const RightSidebar = () => {
   return (
-    <div className="w-56 bg-yellow-200 hidden lg:block">
-      <div className="fixed h-screen overflow-y-auto">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus
-        quasi incidunt modi nostrum, numquam voluptas? Nesciunt aspernatur
-        minima itaque facilis voluptatem quam magnam earum? Ut fugit aliquid
-        libero repellendus quidem! Lorem ipsum dolor sit amet consectetur
-        adipisicing elit. Temporibus quasi incidunt modi nostrum, numquam
-        voluptas? Nesciunt aspernatur minima itaque facilis voluptatem quam
-        magnam earum? Ut fugit aliquid libero repellendus quidem! Lorem ipsum
-        dolor sit amet consectetur adipisicing elit. Temporibus quasi incidunt
-        modi nostrum, numquam voluptas? Nesciunt aspernatur minima itaque
-        facilis voluptatem quam magnam earum? Ut fugit aliquid libero
-        repellendus quidem! Lorem ipsum dolor sit amet consectetur adipisicing
-        elit. Temporibus quasi incidunt modi nostrum, numquam voluptas? Nesciunt
-        aspernatur minima itaque facilis voluptatem quam magnam earum? Ut fugit
-        aliquid libero repellendus quidem! Lorem ipsum dolor sit amet
-        consectetur adipisicing elit. Temporibus quasi incidunt modi nostrum,
-        numquam voluptas? Nesciunt aspernatur minima itaque facilis voluptatem
-        quam magnam earum? Ut fugit aliquid libero repellendus quidem! Lorem
-        ipsum dolor sit amet consectetur adipisicing elit. Temporibus quasi
-        incidunt modi nostrum, numquam voluptas? Nesciunt aspernatur minima
-        itaque facilis voluptatem quam magnam earum? Ut fugit aliquid libero
-        repellendus quidem! Lorem ipsum dolor sit amet consectetur adipisicing
-        elit. Temporibus quasi incidunt modi nostrum, numquam voluptas? Nesciunt
-        aspernatur minima itaque facilis voluptatem quam magnam earum? Ut fugit
-        aliquid libero repellendus quidem! Lorem ipsum dolor sit amet
-        consectetur adipisicing elit. Temporibus quasi incidunt modi nostrum,
-        numquam voluptas? Nesciunt aspernatur minima itaque facilis voluptatem
-        quam magnam earum? Ut fugit aliquid libero repellendus quidem! Lorem
-        ipsum dolor sit amet consectetur adipisicing elit. Temporibus quasi
-        incidunt modi nostrum, numquam voluptas? Nesciunt aspernatur minima
-        itaque facilis voluptatem quam magnam earum? Ut fugit aliquid libero
-        repellendus quidem! Lorem ipsum dolor sit amet consectetur adipisicing
-        elit. Temporibus quasi incidunt modi nostrum, numquam voluptas? Nesciunt
-        aspernatur minima itaque facilis voluptatem quam magnam earum? Ut fugit
-        aliquid libero repellendus quidem! Lorem ipsum dolor sit amet
-        consectetur adipisicing elit. Temporibus quasi incidunt modi nostrum,
-        numquam voluptas? Nesciunt aspernatur minima itaque facilis voluptatem
-        quam magnam earum? Ut fugit aliquid libero repellendus quidem! Lorem
-        ipsum dolor sit amet consectetur adipisicing elit. Temporibus quasi
-        incidunt modi nostrum, numquam voluptas? Nesciunt aspernatur minima
-        itaque facilis voluptatem quam magnam earum? Ut fugit aliquid libero
-        repellendus quidem! Lorem ipsum dolor sit amet consectetur adipisicing
-        elit. Temporibus quasi incidunt modi nostrum, numquam voluptas? Nesciunt
-        aspernatur minima itaque facilis voluptatem quam magnam earum? Ut fugit
-        aliquid libero repellendus quidem! Lorem ipsum dolor sit amet
-        consectetur adipisicing elit. Temporibus quasi incidunt modi nostrum,
-        numquam voluptas? Nesciunt aspernatur minima itaque facilis voluptatem
-        quam magnam earum? Ut fugit aliquid libero repellendus quidem! Lorem
-        ipsum dolor sit amet consectetur adipisicing elit. Temporibus quasi
-        incidunt modi nostrum, numquam voluptas? Nesciunt aspernatur minima
-        itaque facilis voluptatem quam magnam earum? Ut fugit aliquid libero
-        repellendus quidem! Lorem ipsum dolor sit amet consectetur adipisicing
-        elit. Temporibus quasi incidunt modi nostrum, numquam voluptas? Nesciunt
-        aspernatur minima itaque facilis voluptatem quam magnam earum? Ut fugit
-        aliquid libero repellendus quidem! Lorem ipsum dolor sit amet
-        consectetur adipisicing elit. Temporibus quasi incidunt modi nostrum,
-        numquam voluptas? Nesciunt aspernatur minima itaque facilis voluptatem
-        quam magnam earum? Ut fugit aliquid libero repellendus quidem! Lorem
-        ipsum dolor sit amet consectetur adipisicing elit. Temporibus quasi
-        incidunt modi nostrum, numquam voluptas? Nesciunt aspernatur minima
-        itaque facilis voluptatem quam magnam earum? Ut fugit aliquid libero
-        repellendus quidem! Lorem ipsum dolor sit amet consectetur adipisicing
-        elit. Temporibus quasi incidunt modi nostrum, numquam voluptas? Nesciunt
-        aspernatur minima itaque facilis voluptatem quam magnam earum? Ut fugit
-        aliquid libero repellendus quidem! Lorem ipsum dolor sit amet
-        consectetur adipisicing elit. Temporibus quasi incidunt modi nostrum,
-        numquam voluptas? Nesciunt aspernatur minima itaque facilis voluptatem
-        quam magnam earum? Ut fugit aliquid libero repellendus quidem!
+    <div className="w-72 bg-white hidden lg:block h-screen ">
+      <div className="fixed h-screen overflow-y-auto mt-2">
+        <div className="w-full">
+          <div className="flex justify-between px-4 items-center w-full ">
+            <h4 className="text-gray-400 uppercase font-bold tracking-normal text-sm">
+              Requests
+            </h4>
+            <div className="h-4 w-4 rounded-full bg-superblue text-center text-xs text-white font-bold">
+              5
+            </div>
+          </div>
+          <Requests />
+        </div>
       </div>
     </div>
   );
