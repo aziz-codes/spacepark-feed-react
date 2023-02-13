@@ -42,9 +42,6 @@ const Sidebar = () => {
 
             <div className="h-72 hidden lg:block">
               <img src={image} className="object-fill h-full rounded-md" />
-              <h4 className="absolute bottom-2  text-xl px-2 font-extrabold text-red-500">
-                How to build a strong company
-              </h4>
             </div>
             <div className="lg:flex justify-between px-2 items-center mt-4 hidden">
               <Button Icon={PaperAirplaneIcon} text="More" />

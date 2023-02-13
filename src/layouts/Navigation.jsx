@@ -25,7 +25,7 @@ const Navigation = () => {
               </h4>
             </div>
             {link.newNotifications && (
-              <div className="h-4 w-4 rounded-full bg-superblue text-xs font-semibold tracking-tighter text-white text-center hidden lg;block">
+              <div className="h-4 w-4 rounded-full bg-superblue text-xs font-semibold tracking-tighter text-white text-center hidden lg:block">
                 {link.newNotifications}
               </div>
             )}
