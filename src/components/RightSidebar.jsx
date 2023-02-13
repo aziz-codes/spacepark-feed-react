@@ -1,6 +1,6 @@
-import React from "react";
-import Requests from "../layouts/Requests";
+import React, { Suspense, lazy } from "react";
 
+const Requests = lazy(() => import("../layouts/Requests"));
 const RightSidebar = () => {
   return (
     <div className="w-72 bg-white hidden lg:block h-screen ">
@@ -14,7 +14,9 @@ const RightSidebar = () => {
               5
             </div>
           </div>
-          <Requests />
+          <Suspense fallback="Loading ...">
+            <Requests />
+          </Suspense>
         </div>
       </div>
     </div>

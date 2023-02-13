@@ -4,11 +4,11 @@ const Requests = () => {
   return (
     <section className="w-72  flex flex-col gap-4 px-4 mt-4">
       {requests.slice(0, 2).map((request, index) => (
-        <div className="shadow-md rounded-md  h-28 flex flex-col  w-full  bg-white gap-1 border">
-          <div
-            className="flex flex-row gap-2 items-center px-2 py-2 pb-2"
-            key={index}
-          >
+        <div
+          className="shadow-md rounded-md  h-28 flex flex-col  w-full  bg-white gap-1 border"
+          key={index}
+        >
+          <div className="flex flex-row gap-2 items-center px-2 py-2 pb-2">
             <img
               src={request.avatar}
               className="h-10 w-10 rounded-md object-cover"
