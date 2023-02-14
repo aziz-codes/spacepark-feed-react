@@ -20,24 +20,20 @@ const App = () => {
   return (
     <section className="bg-homemain">
       <Navbar />
-      <div className="flex justify-between w-full bg-red-500 mt-1">
+      <div className="flex justify-between w-full bg-white mt-1">
         <Suspense fallback={<SidebarSkeleton />}>
           <Sidebar />
         </Suspense>
-
-        {/* <div className="flex-2">
-          <Stories />
-          <Feed />
-        </div> */}
-
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/peoples" element={<Peoples />} />
-          <Route path="/feed" element={<NewsFeed />} />
-          <Route path="/photos" element={<Photos />} />
-          <Route path="/profile" element={<Profile />} />
-          <Route path="/settings" element={<Settings />} />
-        </Routes>
+        <div className="flex-auto px-4">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/peoples" element={<Peoples />} />
+            <Route path="/feed" element={<NewsFeed />} />
+            <Route path="/photos" element={<Photos />} />
+            <Route path="/profile" element={<Profile />} />
+            <Route path="/settings" element={<Settings />} />
+          </Routes>
+        </div>
         <RightSidebar />
       </div>
     </section>
