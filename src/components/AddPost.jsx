@@ -4,7 +4,7 @@ import { ShareIcon } from "@heroicons/react/24/outline";
 import Button from "../layouts/Button";
 const AddPost = () => {
   return (
-    <section className="pl-4 pr-4 w-full bg-white shadow-md rounded-sm pt-4 pb-4 flex flex-row justify-between">
+    <section className="pl-4 pr-4 w-full bg-white shadow-md rounded-sm pt-4 pb-4 flex flex-row justify-between max-w-lg">
       <div className="flex flex-row gap-3 flex-1">
         <img src={user} className="h-8 w-8 object-cover " />
         <input
