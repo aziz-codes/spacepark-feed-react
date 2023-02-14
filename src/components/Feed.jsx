@@ -19,8 +19,8 @@ const Feed = () => {
   return (
     <section className="w-full max-w-lg rounded-sm    py-2">
       {data.map((item, index) => (
-        <div className="flex flex-col border mt-4 mb-4">
-          <div className="flex flex-row justify-between px-2 p-2" key={index}>
+        <div className="flex flex-col border mt-4 mb-4" key={index}>
+          <div className="flex flex-row justify-between px-2 p-2">
             <div className="items-center flex flex-row gap-2">
               <img src={item.avatar} className="h-12 w-12 rounded-md" />
               <div className="flex flex-col">

@@ -7,7 +7,6 @@ const Contacts = () => {
     axios.get("https://reqres.in/api/users").then((res) => {
       const { data } = res.data;
       setData(data);
-      console.log(res);
     });
   }, []);
   return (
@@ -15,8 +14,8 @@ const Contacts = () => {
       {data.map((user, index) => (
         <NavLink
           key={index}
-          to={`/user/id=${user.id}`}
-          className="flex flex-row items-center px-2 w-full rounded-sm shadow-sm  justify-between"
+          to={`/user/${user.id}`}
+          className="flex flex-row items-center px-2 w-full rounded-sm shadow-sm  justify-between cursor-pointer"
         >
           <div className="flex items-center gap-2">
             <img
@@ -24,7 +23,7 @@ const Contacts = () => {
               className="h-9 w-9 rounded-md"
               alt={user.first_name}
             />
-            <label className="text-xs font-bold">
+            <label className="text-xs font-bold cursor-pointer">
               {user.first_name + " " + user.last_name}
             </label>
           </div>
