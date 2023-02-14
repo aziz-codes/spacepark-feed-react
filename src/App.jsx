@@ -24,7 +24,7 @@ const App = () => {
         <Suspense fallback={<SidebarSkeleton />}>
           <Sidebar />
         </Suspense>
-        <div className="flex-auto px-4">
+        <div className="flex-auto">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/peoples" element={<Peoples />} />
