@@ -4,7 +4,7 @@ import { MagnifyingGlassIcon, PlusIcon } from "@heroicons/react/24/outline";
 import Button from "../layouts/Button";
 const Navbar = () => {
   return (
-    <nav className="sticky w-full  h-14 border-b items-center top-0 bg-white bg-opacity-95 z-50 max-w-6xl">
+    <nav className="sticky w-full  h-14 border-b items-center top-0 bg-white bg-opacity-95 z-50 ">
       <div className="relative flex justify-between px-2 h-full items-center">
         <div className="flex gap-3">
           <div className="h-7 w-7 rounded-sm bg-slate-100 shadow-xl">

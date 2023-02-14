@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
+import { NavLink } from "react-router-dom";
 const Contacts = () => {
   const [data, setData] = useState([]);
   useEffect(() => {
@@ -12,8 +13,9 @@ const Contacts = () => {
   return (
     <div className="flex flex-col gap-3 p-2 w-full px-4">
       {data.map((user, index) => (
-        <div
+        <NavLink
           key={index}
+          to={`/user/id=${user.id}`}
           className="flex flex-row items-center px-2 w-full rounded-sm shadow-sm  justify-between"
         >
           <div className="flex items-center gap-2">
@@ -31,7 +33,7 @@ const Contacts = () => {
               index % 2 === 0 ? "bg-green-700" : "bg-slate-500"
             }`}
           ></div>
-        </div>
+        </NavLink>
       ))}
     </div>
   );
