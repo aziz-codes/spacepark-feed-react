@@ -14,3 +14,4 @@ export default function useFetch() {
   }, []);
   return { data };
 }
+// this custom hook will be responsible for data fetching..
