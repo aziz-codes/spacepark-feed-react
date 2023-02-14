@@ -20,11 +20,11 @@ const App = () => {
   return (
     <section className="bg-homemain">
       <Navbar />
-      <div className="flex justify-between w-full bg-white mt-1">
+      <div className="flex justify-between w-full bg-white mt-1 max-w-6xl">
         <Suspense fallback={<SidebarSkeleton />}>
           <Sidebar />
         </Suspense>
-        <div className="flex-auto">
+        <div className="flex-auto max-w-lg">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/peoples" element={<Peoples />} />

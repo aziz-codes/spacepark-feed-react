@@ -68,3 +68,21 @@ export const storiesPost = [
     post: "https://images.pexels.com/photos/3225529/pexels-photo-3225529.jpeg?auto=compress&cs=tinysrgb&w=600",
   },
 ];
+
+export const feedPost = [
+  {
+    description:
+      "Whether it's watching blue, rolling waves crash against the sandy shore or hearing birds chirping in a green, luscious forest",
+  },
+  {
+    description:
+      "Although most of us spend our days online, it’s always important to unplug and step outside for a little sunshine and fresh air.",
+  },
+  {
+    description:
+      "So, as you venture out to see the fall foliage or spring flowers blooming",
+  },
+  {
+    description: "we hope they inspire you to venture out to mountains, lakes",
+  },
+];
