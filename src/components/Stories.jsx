@@ -18,7 +18,7 @@ const Stories = () => {
   return (
     <div className=" flex flex-row gap-2 w-full bg-white px-4">
       <div
-        className="relative h-48 w-32 bg-cover rounded-md shadow-lg hover:scale-110 cursor-pointer transition-all duration-150 ease-out hover:z-50"
+        className="relative h-48 w-32 bg-cover rounded-md shadow-lg hover:scale-110 cursor-pointer transition-all duration-150 ease-out hover:z-49"
         style={{ backgroundImage: `url(${storiesPost[4].post})` }}
       >
         <div className="absolute flex flex-col gap-1 bottom-4 items-center w-full">
