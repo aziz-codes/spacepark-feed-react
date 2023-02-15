@@ -1,13 +1,14 @@
 import logo from "../assets/icon.png";
-import user from "../assets/user.png";
 import { MagnifyingGlassIcon, PlusIcon } from "@heroicons/react/24/outline";
 import Button from "../layouts/Button";
 import useFetch from "../hooks/useFetch";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
+import { Store } from "../context/Context";
 const Navbar = () => {
   const { data } = useFetch();
-  console.log(data);
+
+  const { user, logout, setLoggedIn } = Store();
   const [searchedResult, setSearchedResult] = useState([]);
   const handleChange = (e) => {
     let result = data.filter((item) =>
@@ -17,6 +18,10 @@ const Navbar = () => {
     if (e.length === 0) {
       setSearchedResult([]);
     }
+  };
+  const handleLogout = () => {
+    setLoggedIn(false);
+    logout();
   };
   return (
     <nav className="sticky w-full  h-14 border-b items-center top-0 bg-white bg-opacity-95 z-50 ">
@@ -59,10 +64,14 @@ const Navbar = () => {
           <button className="h-8 w-8 text-lg font-bold text-white block md:hidden rounded-md border-none bg-superblue">
             +
           </button>
-          <div className="h-10 w-10 rounded-md bg-red-500 flex justify-center items-center relative">
+          <div
+            className="h-10 w-10 rounded-md bg-red-500 flex justify-center items-center relative cursor-pointer"
+            onClick={handleLogout}
+          >
             <img
-              src={user}
-              className="h-8 w-8 m-auto z-50 object-cover absolute top-2"
+              src={user && user.photoURL}
+              className="h-8 w-8 m-auto z-50 object-cover absolute top-2 cursor-pointer"
+              title="Logout"
             />
           </div>
         </div>
