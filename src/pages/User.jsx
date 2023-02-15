@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
+import Loader from "../layouts/Loader";
 import axios from "axios";
 const User = () => {
   const { id } = useParams();
@@ -18,7 +19,7 @@ const User = () => {
   return (
     <section className="flex justify-center text-center items-center my-10">
       {loading ? (
-        <label className="animate-ping">Loading...</label>
+        <Loader />
       ) : (
         <div className="flex flex-col px-3">
           <img
