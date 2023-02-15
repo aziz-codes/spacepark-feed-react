@@ -3,12 +3,14 @@ import { MagnifyingGlassIcon, PlusIcon } from "@heroicons/react/24/outline";
 import Button from "../layouts/Button";
 import useFetch from "../hooks/useFetch";
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { useNavigate, NavLink } from "react-router-dom";
 import { Store } from "../context/Context";
 const Navbar = () => {
+  const navigate = useNavigate();
   const { data } = useFetch();
 
-  const { user, logout, setLoggedIn } = Store();
+  const { logout, setLoggedIn } = Store();
+  let user = JSON.parse(localStorage.getItem("user"));
   const [searchedResult, setSearchedResult] = useState([]);
   const handleChange = (e) => {
     let result = data.filter((item) =>
@@ -19,9 +21,12 @@ const Navbar = () => {
       setSearchedResult([]);
     }
   };
+
   const handleLogout = () => {
     setLoggedIn(false);
     logout();
+    localStorage.clear();
+    navigate("/");
   };
   return (
     <nav className="sticky w-full  h-14 border-b items-center top-0 bg-white bg-opacity-95 z-50 ">

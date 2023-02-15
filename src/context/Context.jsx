@@ -1,11 +1,7 @@
 import { createContext, useContext, useState, useEffect } from "react";
-import {
-  GoogleAuthProvider,
-  signInWithPopup,
-  signOut,
-  onAuthStateChanged,
-} from "firebase/auth";
+import { GoogleAuthProvider, signInWithPopup, signOut } from "firebase/auth";
 import { auth } from "../config";
+import { Navigate } from "react-router-dom";
 
 const AppContext = createContext();
 
@@ -16,19 +12,18 @@ export const AppContextProvider = ({ children }) => {
     signOut(auth);
     setLoggedIn(false);
   };
-  useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-      setUser(currentUser);
-      setLoggedIn(true);
-    });
-    return () => {
-      unsubscribe();
-    };
-  }, []);
 
   const googleSignin = () => {
     const provider = new GoogleAuthProvider();
-    signInWithPopup(auth, provider);
+    provider.setCustomParameters({
+      prompt: "select_account",
+    });
+    signInWithPopup(auth, provider).then((res) => {
+      setUser(res.user);
+      setLoggedIn(true);
+      localStorage.setItem("user", JSON.stringify(res.user));
+      <Navigate to="/" replace={true} />;
+    });
   };
   return (
     <AppContext.Provider

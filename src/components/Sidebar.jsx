@@ -1,10 +1,10 @@
 import React from "react";
-import { Store } from "../context/Context";
+
 import Navigation from "../layouts/Navigation";
 import { PaperAirplaneIcon, XCircleIcon } from "@heroicons/react/24/outline";
 import Button from "../layouts/Button";
 const Sidebar = () => {
-  const { user } = Store();
+  let user = JSON.parse(localStorage.getItem("user"));
   const image =
     "https://images.pexels.com/photos/4144828/pexels-photo-4144828.jpeg?auto=compress&cs=tinysrgb&w=600";
   return (
@@ -17,16 +17,16 @@ const Sidebar = () => {
           <div className="hidden md:w-16 lg:w-56 h-16 lg:h-24 mt-6 lg:mt-1 bg-white shadow-2xl md:flex rounded-md items-center border mb-4">
             <div className=" flex flex-row items-center justify-center pl-5 gap-3">
               <img
-                src={user.photoURL}
+                src={user && user.photoURL}
                 className="h-10 w-10 rounded-md object-cover mx-auto md:mx-0"
               />
               <div className="lg:flex flex-col hidden ">
                 <h4 className="font-semibold tracking-tight">
-                  {user.displayName}
+                  {user && user.displayName}
                 </h4>
                 <span className="text-xs text-slate-500">
-                  {/* {user.displayName.replace(" ", "").toLowerCase()} */}
-                  @username
+                  {user &&
+                    user.displayName.toString().replace(" ", "").toLowerCase()}
                 </span>
               </div>
             </div>
