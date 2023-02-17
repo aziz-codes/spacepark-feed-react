@@ -1,5 +1,4 @@
 import React from "react";
-import user from "../assets/user.png";
 import { ShareIcon } from "@heroicons/react/24/outline";
 import Button from "../layouts/Button";
 const AddPost = () => {
@@ -10,7 +9,7 @@ const AddPost = () => {
         <img src={user && user.photoURL} className="h-8 w-8 object-cover " />
         <input
           type="tex"
-          placeholder="What's new, alendra ?"
+          placeholder={`What's new ${user.displayName} ?`}
           className="outline-none bg-transparent p-1 w-full"
         />
       </div>

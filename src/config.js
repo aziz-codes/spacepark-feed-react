@@ -1,7 +1,7 @@
 import { getAuth } from "firebase/auth";
 import { initializeApp } from "firebase/app";
 const firebaseConfig = {
-  apiKey: "AIzaSyD6HE7GrOASEkICc8rVYczPl8wnsQOCGC0",
+  apiKey: import.meta.env.VITE_API_KEY,
   authDomain: "spacepark-f6c46.firebaseapp.com",
   projectId: "spacepark-f6c46",
   storageBucket: "spacepark-f6c46.appspot.com",
